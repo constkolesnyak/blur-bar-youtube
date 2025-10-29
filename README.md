@@ -2,6 +2,8 @@
 
 Blur hard subs on YouTube.
 
+<img src='screenshot.jpeg' width='800'>
+
 ## Features
 
 - Toggle the blur with a button or the shortcut (`b` by default).
