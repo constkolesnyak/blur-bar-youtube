@@ -15,6 +15,7 @@
     // Configuration
     const BLUR_AMOUNT = 7; // Blur strength
     const TOGGLE_KEY = 'b'; // Key to toggle blur bar on/off
+    const HIDE_BUTTON = false; // If true, button is hidden but shortcut still works
     ////////////////
 
     let injected = false;
@@ -356,6 +357,9 @@
         blurBtn.className = 'blur';
         blurBtn.type = 'button';
         blurBtn.title = 'Blur Bar';
+        if (HIDE_BUTTON) {
+            blurBtn.style.display = 'none';
+        }
         controlMenu.insertBefore(blurBtn, controlMenu.firstChild);
         return [blurBtn];
     }

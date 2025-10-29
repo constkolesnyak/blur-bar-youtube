@@ -8,7 +8,7 @@ Blur hard subs on YouTube.
 
 - Toggle the bar with a button or the shortcut (`b` by default).
 - Drag to move the bar and use the resize handles to fit the subtitle area.
-- Configure the bar strength and shortcut key in the head of the userscript.
+- Configure the bar strength, shortcut key, and button visibility in the head of the userscript.
 - The bar keeps its state between sessions.
 
 ## Install
@@ -16,3 +16,7 @@ Blur hard subs on YouTube.
 1. Install a user script manager.
 2. Create a new user script and paste the code from [`blur-bar-youtube.js`](blur-bar-youtube.js).
 3. Save the script; it automatically runs on `www.youtube.com`.
+
+## Credit
+
+Partially inspired by [this](https://chromewebstore.google.com/detail/blur-bar-for-youtube-lang/mndlpifkemjipbkoejnekcieebmoicmk).
