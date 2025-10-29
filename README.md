@@ -6,9 +6,9 @@ Blur hard subs on YouTube.
 
 ## Features
 
-- Toggle the blur with a button or the shortcut (`b` by default).
-- Drag to move the bar and use the resize handles to fit any subtitle area.
-- Configure the blur strength and shortcut key in the head of the userscript.
+- Toggle the bar with a button or the shortcut (`b` by default).
+- Drag to move the bar and use the resize handles to fit the subtitle area.
+- Configure the bar strength and shortcut key in the head of the userscript.
 - The bar keeps its state between sessions.
 
 ## Install
