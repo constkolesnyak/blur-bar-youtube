@@ -2,7 +2,7 @@
 
 Blur hard subs on YouTube.
 
-<img src='screenshot.jpeg' width='800'>
+<img src='screenshot.jpeg' width='600'>
 
 ## Features
 
@@ -14,5 +14,5 @@ Blur hard subs on YouTube.
 ## Install
 
 1. Install a user script manager.
-2. Create a new user script and paste the code from[ `blur-bar-no-jquery.js`](blur-bar-no-jquery.js).
+2. Create a new user script and paste the code from [`blur-bar-no-jquery.js`](blur-bar-no-jquery.js).
 3. Save the script; it automatically runs on `www.youtube.com`.
