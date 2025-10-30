@@ -14,8 +14,8 @@
 
     // Configuration
     const BLUR_AMOUNT = 7; // Blur strength
-    const TOGGLE_KEY = 'b'; // Key to toggle blur bar on/off
-    const HIDE_BUTTON = false; // If true, button is hidden but shortcut still works
+    const TOGGLE_KEY = 'KeyB'; // Physical key to toggle blur bar (layout-independent)
+    const HIDE_BUTTON = true; // If false, the button is shown
     ////////////////
 
     let injected = false;
@@ -448,16 +448,10 @@
 
         // Keyboard controls - global listener
         document.addEventListener('keyup', (e) => {
-            // Toggle blur bar visibility with configured key
-            if (e.key === TOGGLE_KEY) {
+            // Toggle blur bar visibility with configured key (using e.code for layout independence)
+            if (e.code === TOGGLE_KEY) {
                 e.preventDefault();
                 blurBtns[0].click();
-            }
-            // Hide/show blur bar with 's' key when active
-            if (e.key === 's' && blurBarIconActive) {
-                blurBarActive = !blurBarActive;
-                blurBar.style.opacity = blurBarActive ? '1' : '0';
-                localStorage.setItem(STORAGE_KEYS.ACTIVE, blurBarActive);
             }
         });
 
