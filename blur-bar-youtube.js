@@ -66,7 +66,7 @@
                 backdrop-filter: blur(${BLUR_AMOUNT}px);
                 -webkit-backdrop-filter: blur(${BLUR_AMOUNT}px);
                 background: transparent;
-                z-index: 100;
+                z-index: 10;
                 display: none;
                 cursor: move;
                 border: 2px solid transparent;
