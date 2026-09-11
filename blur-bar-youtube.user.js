@@ -1,12 +1,14 @@
 // ==UserScript==
 // @name         Blur Bar YouTube
 // @namespace    http://tampermonkey.net/
-// @version      1
+// @version      1.1.0
 // @description  Blur Bar YouTube
-// @author       tsnok
+// @author       constkolesnyak
 // @match        *://www.youtube.com/*
 // @grant        none
 // @run-at       document-end
+// @downloadURL  https://raw.githubusercontent.com/constkolesnyak/blur-bar-youtube/main/blur-bar-youtube.user.js
+// @updateURL    https://raw.githubusercontent.com/constkolesnyak/blur-bar-youtube/main/blur-bar-youtube.user.js
 // ==/UserScript==
 
 (function () {
