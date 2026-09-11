@@ -187,6 +187,14 @@
         document.head.appendChild(style);
     }
 
+    function isTypingTarget(target) {
+        if (!(target instanceof Element)) return false;
+        if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return true;
+        // Covers the whole subtree of an editable region, comment boxes included.
+        if (target.isContentEditable) return true;
+        return Boolean(target.closest('#contenteditable-root'));
+    }
+
     function makeDraggable(element, video) {
         let isDragging = false;
         let startX, startY, startLeft, startTop;
@@ -453,10 +461,17 @@
         // Keyboard controls - global listener
         document.addEventListener('keyup', (e) => {
             // Toggle blur bar visibility with configured key (using e.code for layout independence)
-            if (e.code === TOGGLE_KEY) {
-                e.preventDefault();
-                blurBtns[0].click();
-            }
+            if (e.code !== TOGGLE_KEY) return;
+            // A bare key press only. Ctrl/Cmd/Alt/Shift belong to YouTube or the browser.
+            if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+            // ...and not while the user is writing a search query or a comment.
+            if (isTypingTarget(e.target)) return;
+
+            const blurBtn = blurBtns[0];
+            if (!blurBtn) return;
+
+            e.preventDefault();
+            blurBtn.click();
         });
 
         // Button click handlers
