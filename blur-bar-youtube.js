@@ -481,7 +481,6 @@
                     blurBar.style.height = currentState.height;
                     blurBar.style.opacity = '1';
 
-                    console.log('Loaded state:', currentState);
                 } else {
                     blurBar.style.display = 'none';
                     blurBtn.style.backgroundImage =
@@ -511,7 +510,6 @@
         });
 
         injected = true;
-        console.log('Blur bar injected successfully!');
     }
 
     function waitForPlayer() {
