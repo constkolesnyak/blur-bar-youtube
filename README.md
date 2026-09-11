@@ -2,6 +2,10 @@
 
 Blur hard subs on YouTube.
 
+Hard subs are subtitles burned into the picture, so YouTube's caption button can't
+switch them off — awkward if you're learning the language and want to train your
+listening. Park a blurred bar over them and lift it only when you're stuck.
+
 <img src='screenshot.jpeg' width='600'>
 
 ## Features
@@ -14,9 +18,11 @@ Blur hard subs on YouTube.
 
 ## Install
 
-1. Install a userscript manager.
-2. Create a new userscript and paste the code from [`blur-bar-youtube.js`](blur-bar-youtube.js).
-3. Save the script; it automatically runs on `www.youtube.com`.
+1. Install a userscript manager ([Tampermonkey](https://www.tampermonkey.net) or
+   [Violentmonkey](https://violentmonkey.github.io)).
+2. Open [**blur-bar-youtube.user.js**](https://raw.githubusercontent.com/constkolesnyak/blur-bar-youtube/main/blur-bar-youtube.user.js).
+   The manager intercepts the `.user.js` URL and offers to install it in one click.
+3. Confirm; it automatically runs on `www.youtube.com`.
 
 ## Credit
 
